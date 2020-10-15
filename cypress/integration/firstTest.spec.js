@@ -16,9 +16,7 @@ describe('Form input', () => {
     it('Fill Using the Grid', () => {
         cy.get('#inputEmail1').type('putranda@gmail.com')
         cy.get('#inputPassword2').type('123456789')
-
         cy.get('.text').contains('Option 1').click()
-
         cy.get('.text').contains('Option 2').click()
     });
 
@@ -27,17 +25,11 @@ describe('Form input', () => {
         cy.get('#exampleInputPassword1').type('123456789')
             // cy.get('.text').contains('Check me out').click()
         cy.get('.custom-checkbox').eq(1).click()
-
-
     });
 
     it('Fill Form without labels', () => {
-        // cy.get('body > ngx-app > ngx-pages > ngx-one-column-layout > nb-layout > div > div > div > div > div > nb-layout-column > ngx-form-elements > ngx-form-layouts > div:nth-child(2) > div:nth-child(1) > nb-card:nth-child(2) > nb-card-body > form > div:nth-child(1) > input')
         cy.get('[placeholder="Recipients"]').type('putranda bagus')
-
-        // cy.get('body > ngx-app > ngx-pages > ngx-one-column-layout > nb-layout > div > div > div > div > div > nb-layout-column > ngx-form-elements > ngx-form-layouts > div:nth-child(2) > div:nth-child(1) > nb-card:nth-child(2) > nb-card-body > form > div:nth-child(2) > input')
         cy.get('[placeholder="Subject"]').type('halooooo')
-
         cy.get('textarea[placeholder="Message"]').type('hiyahiyahiya ashiap')
     });
 
