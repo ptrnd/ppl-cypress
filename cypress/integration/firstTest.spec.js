@@ -45,10 +45,4 @@ describe('Form input', () => {
         cy.get('#inputEmail').type('pokokimel@mail.com')
         cy.get('#inputWebsite').type('www.bagusbagusbagus.com')
     });
-
-    it.only('visit form', () => {
-        cy.visit('/')
-        cy.contains('Forms').click()
-        cy.contains('Datepicker').click()
-    });
 })
